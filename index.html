@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaStore - Complete E-commerce Solution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +91 9525XXXXXX</span>
+                    <span><i class="fas fa-envelope"></i> support@megastore.com</span>
+                </div>
+                <div class="header-actions">
+                    <button class="account-btn" id="accountBtn">
+                        <i class="fas fa-user"></i> Account
+                    </button>
+                    <button class="wishlist-btn" id="wishlistBtn">
+                        <i class="fas fa-heart"></i> Wishlist
+                        <span class="wishlist-count" id="wishlistCount">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-main">
+                <div class="logo">
+                    <h1>MegaStore</h1>
+                    <span>Your Shopping Paradise</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for products...">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="cart-section">
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div class="cart-info">
+                            <span class="cart-count" id="cartCount">0</span>
+                            <span class="cart-total" id="cartTotal">$0.00</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active" data-category="all">All Products</a></li>
+                    <li><a href="#" class="nav-link" data-category="electronics">Electronics</a></li>
+                    <li><a href="#" class="nav-link" data-category="fashion">Fashion</a></li>
+                    <li><a href="#" class="nav-link" data-category="home">Home & Garden</a></li>
+                    <li><a href="#" class="nav-link" data-category="sports">Sports</a></li>
+                    <li><a href="#" class="nav-link" data-category="books">Books</a></li>
+                    <li><a href="#" class="nav-link" data-category="beauty">Beauty</a></li>
+                    <li><a href="#" class="nav-link" data-category="automotive">Automotive</a></li>
+                    <li><a href="#" class="nav-link" data-category="toys">Toys</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <h2>Summer Sale</h2>
+                    <p>Up to 70% off on selected items</p>
+                    <button class="cta-btn">Shop Now</button>
+                </div>
+                <div class="hero-image">
+                    <img src="https://media.istockphoto.com/photos/summer-sale-now-on-picture-id511722908?k=6&m=511722908&s=612x612&w=0&h=YlnSeAjCcJgQrtt9MLaTw0iL6ai_-QgW7RHAZ26VW0o=" alt="Summer Sale Now On" width="400" height="60">
+
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <h2>New Electronics</h2>
+                    <p>Latest gadgets and technology</p>
+                    <button class="cta-btn">Explore</button>
+                </div>
+                <div class="hero-image">
+                    <img src="https://7esl.com/wp-content/uploads/2020/12/Electronic-Devices-1.jpg" alt="Electronics" width="400" height="600">
+</a>
+
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <h2>Fashion Trends</h2>
+                    <p>Discover the latest fashion styles</p>
+                    <button class="cta-btn">Browse</button>
+                </div>
+                <div class="hero-image">
+                    <img src="https://th.bing.com/th/id/OIP.zYTyQBcWfw70K-uS4V-bLwHaJR?w=208&h=260&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7" alt="Fashion Image" height="400" width="600">
+
+
+                </div>
+            </div>
+        </div>
+        <div class="hero-controls">
+            <button class="hero-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="hero-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="hero-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="electronics">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Electronics</h3>
+                    <p>Latest gadgets & tech</p>
+                </div>
+                <div class="category-card" data-category="fashion">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Fashion</h3>
+                    <p>Trendy clothing & accessories</p>
+                </div>
+                <div class="category-card" data-category="home">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Home & Garden</h3>
+                    <p>Everything for your home</p>
+                </div>
+                <div class="category-card" data-category="sports">
+                    <div class="category-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Sports</h3>
+                    <p>Fitness & outdoor gear</p>
+                </div>
+                <div class="category-card" data-category="books">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Books</h3>
+                    <p>Knowledge & entertainment</p>
+                </div>
+                <div class="category-card" data-category="beauty">
+                    <div class="category-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Beauty</h3>
+                    <p>Skincare & cosmetics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title" id="sectionTitle">All Products</h2>
+                <div class="products-controls">
+                    <div class="sort-controls">
+                        <label for="sortSelect">Sort by:</label>
+                        <select id="sortSelect">
+                            <option value="name">Name</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
+                    <div class="view-controls">
+                        <button class="view-btn active" data-view="grid">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="products-filters">
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <div class="price-range">
+                        <input type="range" id="minPrice" min="0" max="5000" value="0">
+                        <input type="range" id="maxPrice" min="0" max="5000" value="5000">
+                        <div class="price-values">
+                            <span id="minPriceValue">$0</span>
+                            <span id="maxPriceValue">$5000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h4>Rating</h4>
+                    <div class="rating-filters">
+                        <label><input type="checkbox" value="5"> 5 Stars</label>
+                        <label><input type="checkbox" value="4"> 4+ Stars</label>
+                        <label><input type="checkbox" value="3"> 3+ Stars</label>
+                    </div>
+                </div>
+                <button class="clear-filters" id="clearFilters">Clear All</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="cartShipping">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax:</span>
+                    <span id="cartTax">$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="cartFinalTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Checkout</h3>
+                <button class="modal-close" id="checkoutClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="checkout-steps">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-title">Shipping</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-title">Payment</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-title">Review</span>
+                </div>
+            </div>
+            <div class="checkout-content">
+                <!-- Step 1: Shipping Information -->
+                <div class="checkout-step active" id="step1">
+                    <h4>Shipping Information</h4>
+                    <form class="checkout-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <input type="text" id="state" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP Code</label>
+                                <input type="text" id="zip" required>
+                            </div>
+                        </div>
+                    </form>
+                    <button class="next-step-btn" onclick="nextStep(2)">Continue to Payment</button>
+                </div>
+
+                <!-- Step 2: Payment Information -->
+                <div class="checkout-step" id="step2">
+                    <h4>Payment Information</h4>
+                    <div class="payment-methods">
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="card" checked>
+                            <span class="payment-icon"><i class="fas fa-credit-card"></i></span>
+                            Credit/Debit Card
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="paypal">
+                            <span class="payment-icon"><i class="fab fa-paypal"></i></span>
+                            PayPal
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="apple">
+                            <span class="payment-icon"><i class="fab fa-apple-pay"></i></span>
+                            Apple Pay
+                        </label>
+                    </div>
+                    <form class="payment-form" id="cardForm">
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date</label>
+                                <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardName">Name on Card</label>
+                            <input type="text" id="cardName" required>
+                        </div>
+                    </form>
+                    <div class="step-buttons">
+                        <button class="prev-step-btn" onclick="prevStep(1)">Back</button>
+                        <button class="next-step-btn" onclick="nextStep(3)">Review Order</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Order Review -->
+                <div class="checkout-step" id="step3">
+                    <h4>Order Review</h4>
+                    <div class="order-review">
+                        <div class="review-items" id="reviewItems">
+                            <!-- Order items will be loaded here -->
+                        </div>
+                        <div class="review-summary">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="reviewSubtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping:</span>
+                                <span id="reviewShipping">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax:</span>
+                                <span id="reviewTax">$0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="reviewTotal">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-buttons">
+                        <button class="prev-step-btn" onclick="prevStep(2)">Back</button>
+                        <button class="place-order-btn" id="placeOrderBtn">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <div class="order-success">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Order Placed Successfully!</h3>
+                <p>Thank you for your purchase. Your order number is:</p>
+                <div class="order-number" id="orderNumber">#ORD-12345</div>
+                <p>You will receive a confirmation email shortly.</p>
+                <button class="continue-shopping-btn" id="continueShoppingBtn">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Loading Spinner -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
